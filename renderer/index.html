@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MP3 to SRT</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <h1>MP3 to SRT</h1>
+
+      <section id="dropZone" class="drop-zone">
+        <p>Drag & drop an MP3 file here</p>
+        <p class="hint">or use the button below</p>
+      </section>
+
+      <div class="row">
+        <button id="chooseMp3Btn">Choose MP3</button>
+        <span id="selectedMp3" class="path-text">No file selected</span>
+      </div>
+
+      <div class="row controls">
+        <label>
+          Model
+          <select id="modelSelect">
+            <option value="tiny">tiny</option>
+            <option value="base">base</option>
+            <option value="small">small</option>
+            <option value="medium">medium</option>
+            <option value="large-v3" selected>large-v3</option>
+          </select>
+        </label>
+
+        <label>
+          Device
+          <select id="deviceSelect">
+            <option value="cuda" selected>cuda</option>
+            <option value="cpu">cpu</option>
+          </select>
+        </label>
+
+        <label>
+          Compute Type
+          <select id="computeTypeSelect">
+            <option value="float16" selected>float16</option>
+            <option value="int8_float16">int8_float16</option>
+            <option value="int8">int8</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="row">
+        <button id="chooseOutputBtn">Choose Output Folder</button>
+        <span id="selectedOutput" class="path-text">Default: same folder as MP3</span>
+      </div>
+
+      <div class="row">
+        <button id="transcribeBtn" class="primary">Transcribe to SRT</button>
+        <button id="openOutputBtn" disabled>Open Output Folder</button>
+      </div>
+
+      <section>
+        <h2>Status / Logs</h2>
+        <textarea id="logArea" readonly></textarea>
+      </section>
+    </main>
+
+    <script src="renderer.js"></script>
+  </body>
+</html>

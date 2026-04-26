@@ -1,0 +1,20 @@
+{
+  "name": "mp3-to-srt",
+  "version": "1.0.0",
+  "description": "Offline Electron app to transcribe MP3 to SRT using faster-whisper",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "keywords": [
+    "electron",
+    "whisper",
+    "srt",
+    "transcription"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^32.0.0"
+  }
+}
