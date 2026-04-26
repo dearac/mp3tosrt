@@ -1,0 +1,112 @@
+:root {
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Segoe UI, system-ui, -apple-system, sans-serif;
+  background: #121212;
+  color: #f3f3f3;
+}
+
+.app {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+h1,
+h2 {
+  margin: 0 0 14px;
+}
+
+.drop-zone {
+  border: 2px dashed #555;
+  border-radius: 12px;
+  padding: 30px;
+  text-align: center;
+  background: #1a1a1a;
+  margin-bottom: 14px;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.drop-zone.drag-over {
+  border-color: #62b1ff;
+  background: #1f2a35;
+}
+
+.hint {
+  color: #aaa;
+  margin-top: 8px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.controls {
+  gap: 16px;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 14px;
+}
+
+button,
+select {
+  border-radius: 8px;
+  border: 1px solid #444;
+  background: #222;
+  color: #f3f3f3;
+  padding: 9px 12px;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:hover:not(:disabled) {
+  background: #2b2b2b;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+button.primary {
+  background: #0059c9;
+  border-color: #0059c9;
+}
+
+button.primary:hover:not(:disabled) {
+  background: #0a68df;
+}
+
+.path-text {
+  color: #bbb;
+  overflow-wrap: anywhere;
+}
+
+#logArea {
+  width: 100%;
+  min-height: 220px;
+  resize: vertical;
+  border: 1px solid #444;
+  border-radius: 10px;
+  padding: 12px;
+  background: #0f0f0f;
+  color: #9be09b;
+  font-family: Consolas, Menlo, monospace;
+  line-height: 1.35;
+}
